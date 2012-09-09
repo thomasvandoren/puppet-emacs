@@ -1,5 +1,6 @@
 puppet-emacs
 ============
+[![Build Status](https://secure.travis-ci.org/thomasvandoren/puppet-emacs.png)](http://travis-ci.org/thomasvandoren/puppet-emacs)
 
 Description
 -----------
