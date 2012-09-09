@@ -5,3 +5,6 @@
 
 # Build stuff.
 /pkg
+
+# Spec test stuff.
+/spec/fixtures
