@@ -1,0 +1,8 @@
+name         'thomasvandoren-emacs'
+version      '0.0.1'
+author       'Thomas Van Doren'
+license      'GPLv2'
+project_page 'https://github.com/thomasvandoren/puppet-emacs'
+source       'https://github.com/thomasvandoren/puppet-emacs'
+summary      'A puppet module to install emacs from source.'
+description  'A puppet module to install emacs from source.'
