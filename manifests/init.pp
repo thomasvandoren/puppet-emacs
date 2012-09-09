@@ -23,7 +23,15 @@
 class emacs (
   $emacs_src_dir = '/opt/emacs-src',
   ) {
-  $packages = ['build-essential', 'make',]
+  case $::osfamily {
+    'Debian': {
+      $packages = ['build-essential', 'make',]
+    }
+    default: {
+      fail("OS family not suppored: ${::osfamily}.")
+    }
+  }
+
   package { $packages:
     ensure => present,
   }
@@ -54,8 +62,8 @@ class emacs (
   }
   exec { 'build-dep-emacs':
     command => '/usr/bin/apt-get --yes -o Dpkg::Options="--confold" build-dep emacs23',
-    user    => 'local-build',
-    group   => 'local-build',
+    user    => 'root',
+    group   => 'root',
     creates => '/usr/bin/quilt',
   }
   exec { 'unpack-emacs':
